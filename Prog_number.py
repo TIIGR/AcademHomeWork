@@ -1,4 +1,4 @@
-#! /usr/bin/env python3
+#!/usr/bin/env python3
 print('Введите 4-х значное число : ')
 Y = int(input())
 a = Y // 1000
