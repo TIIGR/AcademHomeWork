@@ -1,9 +1,9 @@
-a = int(input("Введите число a: ")) 
-b = int(input("Введите число b: ")) 
+a = int(input("Введите число a: "))
+b = int(input("Введите число b: "))
 
-while a != 0 and b != 0 :
-    if a > b :
+while a != 0 and b != 0:
+    if a > b:
         a = a % b
-    else :
+    else:
         b = b % a
-print ("gcd(a,b) =" , a + b)
+print("gcd(a,b) =", a + b)
