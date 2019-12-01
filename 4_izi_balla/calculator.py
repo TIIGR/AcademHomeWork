@@ -13,7 +13,7 @@ def convert(value, old, new):
             return convert(n // new, old, new) + alphabet[n % new]
 
 
-a = input("Введите число: ")
+a = input("Введите число (от 0 до Z): ")
 b = int(input("Введите основание сс введенного числа (не превыш. 36): "))
 c = int(input("Введите конечное основание сс (не превыш. 36): "))
 print(convert(a, b, c))
