@@ -1,4 +1,4 @@
-def convert(value, old, new):
+def conversion(value, old, new):
     if b < 2 or c < 2 or b > 36 or c > 36:
         return "Введенные вами сс, противоречат возможностям программы"
     else:
@@ -10,10 +10,10 @@ def convert(value, old, new):
         if n < new:
             return alphabet[n]
         else:
-            return convert(n // new, old, new) + alphabet[n % new]
+            return conversion(n // new, old, new) + alphabet[n % new]
 
 
-a = input("Введите число (от 0 до Z): ")
+a = input("Введите число (от 0 до z): ")
 b = int(input("Введите основание сс введенного числа (не превыш. 36): "))
 c = int(input("Введите конечное основание сс (не превыш. 36): "))
-print(convert(a, b, c))
+print("Ответ: ", conversion(a, b, c))
