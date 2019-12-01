@@ -8,5 +8,5 @@ def Prime(n):
         return d == n
     
 
-a = int(input("Введите число: "))
+a = int(input("Введите натуральное число: "))
 print(Prime(a))
