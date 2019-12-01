@@ -1,19 +1,19 @@
-def calc(num, base, target):
+def convert(value, old, new):
     if b <= 0 or c <= 0 or b > 36 or c > 36:
         return "Введенные вами сс, противоречат возможностям программы"
     else:
-        if isinstance(num, str):
-            n = int(num, base)
+        if isinstance(value, str):
+            n = int(value, old)
         else:
-            n = int(num)
+            n = int(value)
         alphabet = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-        if n < target:
+        if n < new:
             return alphabet[n]
         else:
-            return calc(n // target, base, target) + alphabet[n % target]
+            return convert(n // new, old, new) + alphabet[n % new]
 
 
 a = input("Введите число: ")
 b = int(input("Введите основание сс введенного числа (не превыш. 36): "))
 c = int(input("Введите конечное основание сс (не превыш. 36): "))
-print(calc(a, b, c))
+print(convert(a, b, c))
