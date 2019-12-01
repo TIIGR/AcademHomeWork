@@ -1,4 +1,4 @@
-def carry(value, base=10):
+def carry(value, base):
     if isinstance(value, str):
         n = int(value)
     else:
