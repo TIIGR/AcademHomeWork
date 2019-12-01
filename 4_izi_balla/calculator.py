@@ -1,13 +1,15 @@
-def convert_base(num, to_base=10, from_base=10):
-    if isinstance(num, str):
-        n = int(num, from_base)
+def carry(value, base=10):
+    if isinstance(value, str):
+        n = int(value)
     else:
-        n = int(num)
+        n = int(value)
     alphabet = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-    if n < to_base:
+    if n < base:
         return alphabet[n]
     else:
-        return convert_base(n // to_base, to_base) + alphabet[n % to_base]
+        return carry(n // base, base) + alphabet[n % base]
 
 
-print(convert_base(4, 2, 10))
+a = int(input("Введите число в 10 сс: "))
+c = int(input("Введите основание конечной системы счисления: "))
+print(carry(a, c))
