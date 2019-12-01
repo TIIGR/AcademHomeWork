@@ -1,5 +1,5 @@
 def convert(value, old, new):
-    if b <= 0 or c <= 0 or b > 36 or c > 36:
+    if b <= 1 or c <= 1 or b > 36 or c > 36:
         return "Введенные вами сс, противоречат возможностям программы"
     else:
         if isinstance(value, str):
