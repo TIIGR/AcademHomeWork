@@ -1,6 +1,6 @@
+rus = "0123456789абвгдеёжзийклмнопрстуфхцчшщъыьэюя.,?!()# "
+eng = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMOPQRSUVWXYZ"
 def encode(first):
-    rus = "0123456789абвгдеёжзийклмнопрстуфхцчшщъыьэюя.,?!()# "
-    eng = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLM "
     length = len(first)
     degree = length - 1
     number = 0
@@ -19,8 +19,6 @@ def encode(first):
         return wod
 
 def decode(word):
-    rus = "0123456789абвгдеёжзийклмнопрстуфхцчшщъыьэюя.,?!()# "
-    eng = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLM "
     length = len(word)
     degree = 0
     number = 0
@@ -36,14 +34,12 @@ def decode(word):
             nome = number % 51
             wod = wod + rus[nome]
             number = number // 51
-        inverse = wod[::-1]
-        return inverse
+        wod = wod[::-1]
+        return wod
 
 
-Q = int(input("Декодировать (tap 0) или закодировать (tap 1) текст? "))
-if Q == 0:
-    n = str(input("Декодировать текст: "))
+n = input("Введите текст, он автоматом распознаст, что с ним делать: ")
+if n[0] in eng:
     print(decode(n))
-if Q == 1:
-    n = str(input("Закодировать текст: "))
+if n[0] in rus:
     print(encode(n))
