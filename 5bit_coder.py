@@ -9,14 +9,11 @@ def encode(first):
         code = rus.index(first[ord])
         number = number + (code * (51 ** degree))
         degree = degree - 1
-    if number == 0:
-        return 0
-    else:
-        while number != 0:
-            nome = number % 50
-            wod = wod + eng[nome]
-            number = number // 50
-        return wod
+    while number != 0:
+        nome = number % 50
+        wod = wod + eng[nome]
+        number = number // 50
+    return wod
 
 def decode(word):
     length = len(word)
@@ -27,15 +24,12 @@ def decode(word):
         code = eng.index(word[ord])
         number = number + (code * (50 ** degree))
         degree = degree + 1
-    if number == 0:
-        return 0
-    else:
-        while number != 0:
-            nome = number % 51
-            wod = wod + rus[nome]
-            number = number // 51
-        wod = wod[::-1]
-        return wod
+    while number != 0:
+        nome = number % 51
+        wod = wod + rus[nome]
+        number = number // 51
+    wod = wod[::-1]
+    return wod
 
 
 n = input("Введите закодированный (или обычный) текст, программа сама решит, что делать: ")
