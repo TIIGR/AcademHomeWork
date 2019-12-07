@@ -16,6 +16,6 @@ def parse_int(value: Union[str, int]) -> int:  # Функция принимае
     return int(value)  # Но возвращает только числа
 
 
-print(repeat('hello', 5))
-print(Longest('hello', 'hi'))
-print(parse_int('5469'))
+print(repeat('hello', 5))  # Выводит ['hello', 'hello', 'hello', 'hello', 'hello']
+print(Longest('hello', 'hi'))  # Выводит hello
+print(parse_int('5496'))  # Выводит 5496
