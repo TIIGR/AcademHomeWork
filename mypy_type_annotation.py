@@ -12,5 +12,10 @@ def Longest(x: A, y: A) -> A:  # Функция определяет и возв
     return x if len(x) >= len(y) else y
 
 
-def parse_int(value: Union[str, int]) -> int:  # Функция принимает на вход строки и целые числа, но возвр. только числа
-    return int(value)
+def parse_int(value: Union[str, int]) -> int:  # Функция принимает на вход строки из чисел и целые числа
+    return int(value)  # Но возвращает только числа
+
+
+print(repeat('hello', 5))
+print(Longest('hello', 'hi'))
+print(parse_int('5469'))
