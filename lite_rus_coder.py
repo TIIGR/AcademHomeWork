@@ -1,5 +1,5 @@
-rus = "0123456789АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдеёжзийклмнопрстуфхцчшщъыьэюя.,?!() "
-eng = "akĕUĈDēĘĀpLrPxAčďonzcMXąĊJĐRęlĨĆċĜemjyiKĝVQăIwCOědShWĖćĒbBqČĂFsđėĉğfĔHvĎuYĞGĚĄātEgZ"
+rus = "(.!0БойЙкАсбЁВО4цНжХЩъ2эЪ5фяуеСдшИЕмЗЬпПЫрЛ9ыФлгШёхвз3тн7Ящ1ЮЖКУГ6иьЧч8ЦаЭМРюДТ?,) "
+eng = "akĕUĈDēĘĀpLrPxčďAonzcMXąĊJĐRęlĨĆċĜemjyiKĝVQăIwCOědShWĖćĒbBqČĂFsđėĉğfĔHvĎuYĞGĚĄātEgZ"
 
 
 def encode(word):
