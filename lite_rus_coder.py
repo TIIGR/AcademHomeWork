@@ -3,23 +3,27 @@ eng = "akĕUĈDēĘĀpLrPxčďAonzcMXąĊJĐRęlĨĆċĜemjyiKĝVQăIwCOědShWĖ
 
 
 def encode(word):
-    length = len(word)
-    wod = ""
-    for Ord in range(0, length):
-        wod = wod + eng[rus.index(word[Ord])]
-    return wod
+    code = ""
+    for Ord in word:
+        if Ord in rus:
+            code = code + eng[rus.index(Ord)]
+        else:
+            exit('Недопустимый ввод!')
+    return code
 
 
-def decode(word):
-    length = len(word)
-    wod = ""
-    for Ord in range(0, length):
-        wod = wod + rus[eng.index(word[Ord])]
-    return wod
+def decode(code):
+    word = ""
+    for Ord in code:
+        if Ord in eng:
+            word = word + rus[eng.index(Ord)]
+        else:
+            exit('Недопустимый ввод!')
+    return word
 
 
 n = input("Введите закодированный (или обычный) текст, программа сама решит, что делать: ")
-if n[0] in eng:
-    print(decode(n))
 if n[0] in rus:
     print(encode(n))
+else:
+    print(decode(n))
