@@ -1,9 +1,9 @@
-rus = "(.!0БойЙкАсбЁВО4цНжХЩъ2эЪ5фяуеСдшИЕмЗЬпПЫрЛ9ыФлгШёхвз3тн7Ящ1ЮЖКУГ6иьЧч8ЦаЭМРюДТ?,) "
-eng = "akĕUĈDēĘĀpLrPxčďAonzcMXąĊJĐRęlĨĆċĜemjyiKĝVQăIwCOědShWĖćĒbBqČĂFsđėĉğfĔHvĎuYĞGĚĄātEgZ"
+rus = '(.!0БойЙкАсбЁВО4цНжХЩъ2эЪ5фяуеСдшИЕмЗЬпПЫрЛ9ыФлгШёхвз3тн7Ящ1ЮЖКУГ6иьЧч8ЦаЭМРюДТ?,) '
+eng = 'akĕUĈDēĘĀpLrPxčďAonzcMXąĊJĐRęlĨĆċĜemjyiKĝVQăIwCOědShWĖćĒbBqČĂFsđėĉğfĔHvĎuYĞGĚĄātEgZ'
 
 
 def encode(word):
-    code = ""
+    code = ''
     for Ord in word:
         if Ord in rus:
             code = code + eng[rus.index(Ord)]
@@ -13,7 +13,7 @@ def encode(word):
 
 
 def decode(code):
-    word = ""
+    word = ''
     for Ord in code:
         if Ord in eng:
             word = word + rus[eng.index(Ord)]
@@ -22,7 +22,9 @@ def decode(code):
     return word
 
 
-n = input("Введите закодированный (или обычный) текст, программа сама решит, что делать: ")
+n = str(input("Введите закодированный (или обычный) текст, программа сама решит, что делать: "))
+if n == '':
+    exit('Ничего не введено!')
 if n[0] in rus:
     print(encode(n))
 else:
