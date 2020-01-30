@@ -16,5 +16,5 @@ def de_en_code(word):
 
 
 Word = str(input('Введите текст: '))
-Q = int(input('Зашифровать (кн. 0) | Расшифровать (кн. 1): '))
+Q = int(input('Зашифровать (к. 0) | Расшифровать (к. 1): '))
 print(de_en_code(Word))
