@@ -7,10 +7,10 @@ def de_en_code(word):
         if word[Ord] not in RUS:
             exit('Присутствует недопустимый символ!')
         if Q == 0:
-            ind = (RUS.index(word[Ord]) + ((-1) ** Ord) * (Ord + 1)) % 88
+            ind = (RUS.index(word[Ord]) + ((-1) ** Ord) * (Ord + 1)) % len(RUS)
             code = code + RUS[ind]
         if Q == 1:
-            ind = (RUS.index(word[Ord]) - ((-1) ** Ord) * (Ord + 1)) % 88
+            ind = (RUS.index(word[Ord]) - ((-1) ** Ord) * (Ord + 1)) % len(RUS)
             code = code + RUS[ind]
     return code
 
