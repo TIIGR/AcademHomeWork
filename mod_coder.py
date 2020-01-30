@@ -3,8 +3,7 @@ RUS = '0123456789АаБбВвГгДдЕеЁёЖжЗзИиЙйКкЛлМмНнО�
 
 def de_en_code(word):
     code = ''
-    t = len(word)
-    for Ord in range(0, t):
+    for Ord in range(0, len(word)):
         if word[Ord] not in RUS:
             exit('Присутствует недопустимый символ!')
         if Q == 0:
