@@ -6,17 +6,17 @@ def de_en_code(text):
     code = ''
     for Ord in range(0, len(text)):
         if text[Ord] not in RUS:
-            for Bug in range(Ord, len(text)):
-                if text[Bug] not in RUS:
-                    error = error + text[Bug]
-            exit(error)
-        if Q == 0:
+            error = error + text[Ord]
+        if Q == 0 and text[Ord] in RUS:
             ind = (RUS.index(text[Ord]) + ((-1) ** Ord) * (Ord + 1)) % len(RUS)
             code = code + RUS[ind]
-        if Q == 1:
+        if Q == 1 and text[Ord] in RUS:
             ind = (RUS.index(text[Ord]) - ((-1) ** Ord) * (Ord + 1)) % len(RUS)
             code = code + RUS[ind]
-    return code
+    if error != 'Присутствуют недопустимые символы: ':
+        return error
+    else:
+        return code
 
 
 Text = str(input('Введите текст: '))
