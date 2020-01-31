@@ -2,15 +2,13 @@ RUS = '0123456789АаБбВвГгДдЕеЁёЖжЗзИиЙйКкЛлМмНнО�
 
 
 def de_en_code(text):
-    code = ''
+    code = 'Результат: '
     error = 'Присутствуют недопустимые символы: '
     for Ord in range(0, len(text)):
-        if text[Ord] not in RUS:
+        if text[Ord] in RUS:
+            code = code + RUS[(RUS.index(text[Ord]) + ((-1) ** (Ord + Q)) * (Ord + 1)) % len(RUS)]
+        else:
             error = error + text[Ord]
-        if Q == 0 and text[Ord] in RUS:
-            code = code + RUS[(RUS.index(text[Ord]) + ((-1) ** Ord) * (Ord + 1)) % len(RUS)]
-        if Q == 1 and text[Ord] in RUS:
-            code = code + RUS[(RUS.index(text[Ord]) - ((-1) ** Ord) * (Ord + 1)) % len(RUS)]
     if error == 'Присутствуют недопустимые символы: ':
         return code
     else:
