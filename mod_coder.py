@@ -2,21 +2,19 @@ RUS = '0123456789АаБбВвГгДдЕеЁёЖжЗзИиЙйКкЛлМмНнО�
 
 
 def de_en_code(text):
-    error = 'Присутствуют недопустимые символы: '
     code = ''
+    error = 'Присутствуют недопустимые символы: '
     for Ord in range(0, len(text)):
         if text[Ord] not in RUS:
             error = error + text[Ord]
         if Q == 0 and text[Ord] in RUS:
-            ind = (RUS.index(text[Ord]) + ((-1) ** Ord) * (Ord + 1)) % len(RUS)
-            code = code + RUS[ind]
+            code = code + RUS[(RUS.index(text[Ord]) + ((-1) ** Ord) * (Ord + 1)) % len(RUS)]
         if Q == 1 and text[Ord] in RUS:
-            ind = (RUS.index(text[Ord]) - ((-1) ** Ord) * (Ord + 1)) % len(RUS)
-            code = code + RUS[ind]
-    if error != 'Присутствуют недопустимые символы: ':
-        return error
-    else:
+            code = code + RUS[(RUS.index(text[Ord]) - ((-1) ** Ord) * (Ord + 1)) % len(RUS)]
+    if error == 'Присутствуют недопустимые символы: ':
         return code
+    else:
+        return error
 
 
 Text = str(input('Введите текст: '))
