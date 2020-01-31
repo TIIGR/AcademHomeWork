@@ -6,9 +6,9 @@ def de_en_code(text):
     code = ''
     for Ord in range(0, len(text)):
         if text[Ord] not in RUS:
-            for bug in range(Ord, len(text)):
-                if text[bug] not in RUS:
-                    error = error + text[bug]
+            for Bug in range(Ord, len(text)):
+                if text[Bug] not in RUS:
+                    error = error + text[Bug]
             exit(error)
         if Q == 0:
             ind = (RUS.index(text[Ord]) + ((-1) ** Ord) * (Ord + 1)) % len(RUS)
