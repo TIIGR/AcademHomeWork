@@ -1,15 +1,11 @@
 def de_en_code(text):
     code = ''
-    error = 'Присутствуют недопустимые символы: '
     for Ord in range(0, len(text)):
         if ord(text[Ord]) < 1424:
             code = code + chr((ord(text[Ord]) + ((-1) ** (Ord + Q)) * ((Ord + 1) * 2)) % 1424)
         else:
-            error = error + text[Ord]
-    if error == 'Присутствуют недопустимые символы: ':
-        return code
-    else:
-        return error
+            exit('Присутствуют недопустимые символы!')
+    return code
 
 
 Text = str(input('Введите текст: '))
