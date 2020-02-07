@@ -4,10 +4,13 @@ def de_en_code(text):
         if ord(text[Ord]) < 1424:
             code = code + chr((ord(text[Ord]) + ((-1) ** (Ord + Q)) * ((Ord + 1) * 2)) % 1424)
         else:
-            exit('Присутствуют недопустимые символы!')
-    return code
+            return print('Присутствуют недопустимые символы!')
+    with open(Directory, 'w+', encoding='utf-8') as file:
+        file.write(code)
+    return print('Файл готов')
 
 
-Text = str(input('Введите текст: '))
-Q = int(input('Зашифровать (введите четное число) | Расшифровать (введите нечетное число): '))
-print(de_en_code(Text))
+Directory = str(input('Укажите полный путь к текстовому файлу: '))
+File = open(Directory, 'r', encoding='utf-8')
+Q = int(input('Зашифровать (кнопка 0) | Расшифровать (кнопка 1): '))
+de_en_code(File.read())
