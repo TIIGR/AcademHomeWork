@@ -1,3 +1,3 @@
-import pr
+import module
 
-print('Ответ:', pr.fib(int(input("Номер элемента ряда Фибоначчи: "))))
+print('Ответ:', module.fib(int(input("Номер элемента ряда Фибоначчи: "))))
