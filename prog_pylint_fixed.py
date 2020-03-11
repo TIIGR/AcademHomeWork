@@ -1,6 +1,3 @@
-"""
-This program does the job for me :)
-"""
 print('Введите 4-х значное число : ')
 Y = int(input())
 A = Y // 1000
