@@ -50,7 +50,7 @@ def v_gauss_no_jit(ab: arr) -> arr:
 
     x = []
     for i in range(n):
-        x.append(round(ab[i][n] * 10 ** 10) * 10 ** -10)
+        x.append(ab[i][n])
 
     return x
 
