@@ -8,7 +8,7 @@ def repeat(x: T, n: int) -> List[T]:  # Функция при вводе x, n в
     return [x] * n
 
 
-def Longest(x: A, y: A) -> A:  # Функция определяет и возвращает результат такой строки, которая больше другой.
+def longest(x: A, y: A) -> A:  # Функция определяет и возвращает результат такой строки, которая больше другой.
     return x if len(x) >= len(y) else y
 
 
@@ -17,5 +17,5 @@ def parse_int(value: Union[str, int]) -> int:  # Функция принимае
 
 
 print(repeat('hello', 5))  # Выводит ['hello', 'hello', 'hello', 'hello', 'hello']
-print(Longest('hello', 'hi'))  # Выводит hello
+print(longest('hello', 'hi'))  # Выводит hello
 print(parse_int('5496'))  # Выводит 5496
