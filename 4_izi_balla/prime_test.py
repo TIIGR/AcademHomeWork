@@ -1,6 +1,6 @@
-def Prime(n):
+def prime(n):
     if n <= 0:
-        return "it's not a natural number!"
+        return "Число не является натуральным!"
     else:
         if n == 1:
             return "True"
@@ -11,5 +11,4 @@ def Prime(n):
             return d == n
 
 
-a = int(input("Введите число: "))
-print(Prime(a))
+print(prime(int(input("Введите число: "))))
