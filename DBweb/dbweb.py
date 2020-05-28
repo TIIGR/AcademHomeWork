@@ -14,7 +14,7 @@ def db_editor():
     lst = request.args.get('command', '').split()
     con = connect('base.db')
     cur = con.cursor()
-    if len(lst) != 3 or len(lst[2]) != 1:
+    if len(lst) != 3 or len(lst[2]) != 1 or lst[0] not in ['A', 'B', 'C', 'D']:
         items = cur.execute('SELECT * FROM students').fetchall()
         cur.close()
         con.close()
