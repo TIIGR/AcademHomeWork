@@ -18,14 +18,14 @@ def db_editor():
         items = cur.execute('SELECT * FROM students').fetchall()
         cur.close()
         con.close()
-        return render_template('db_editor.html', items=items)
+        return render_template('db_web.html', items=items)
     else:
         cur.execute('UPDATE students SET "' + lst[0] + '" = "' + lst[2] + '" WHERE Z = "' + lst[1] + '"')
         con.commit()
         items = cur.execute('SELECT * FROM students').fetchall()
         cur.close()
         con.close()
-        return render_template('db_editor.html', items=items)
+        return render_template('db_web.html', items=items)
 
 
 if __name__ == '__main__':
