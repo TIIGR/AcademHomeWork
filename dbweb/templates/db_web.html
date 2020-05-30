@@ -32,14 +32,16 @@
 <table>
     <td>╚════════════════════════════╝</td>
 </table>
-<tr>Введите: название столбца, фамилию студента и новое значение ячейки через пробелы в строгой последовательности:</tr>
+<table>
+<tr>Введите комманду замены данных в ячейке по такому шаблону:</tr>
+</table>
+<table>
+<tr>UPDATE students SET 'название столбца' = 'новое значение ячейки' WHERE Z = 'фамилия студента':</tr>
+</table>
 <table>
 <form action="/db" method="GET">
-  <input type="text" name="command" />
-  <input type="submit" value="Выполнить!" style="display:none;">
+  <input type="text" name="command" size="100" />
+  <input type="submit" value="Выполнить!" style="display:none;" >
 </form>
 </table>
-<td>
-    Примечание: допускается только 1 символ в ячейке, а также в команде количество слов не равное 3, база данных не изменится в таких случаях.
-</td>
 {% endblock %}
